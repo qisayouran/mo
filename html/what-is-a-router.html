@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+  <div>
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top bg-dark">
+      <h4>
+        <a class="my-title align-middle" href="/">网络知识</a>
+      </h4>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse my-header" id="navbarCollapse">
+        <ul class="nav mr-md-auto">
+        </ul>
+        <ul class="navbar-nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link" href="/">网络层</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/html/how-does-the-internet-work.html">什么是互联网</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-expanded="false">
+              网络基础知识局域网（LAN）
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/html/what-is-routing.html">什么是路由？</a>
+              <a class="dropdown-item active" href="#">什么是路由器？</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- 内容 -->
+    <div class="my-container container-fluid">
+      <div class="my-left">
+        <div>
+          <h4>学习目标</h4>
+          <p>阅读本文后，您将能够：</p>
+            <ul>
+              <li>说明什么是路由器</li>
+              <li>识别不同类型的路由器</li>
+              <li>描述路由器和调制解调器之间的区别</li>
+            </ul>
+        </div>
+      </div>
+      <div class="my-right-m container-fluid">
+        <div>
+          <h4>目录</h4>
+            <ul>
+              <li><a href="#1">什么是路由器？</a></li>
+              <li><a href="#2">路由器如何工作？</a></li>
+              <li><a href="#3">路由器和调制解调器之间有什么区别？</a></li>
+              <li><a href="#4">有哪些不同类型的路由器？</a></li>
+              <li><a href="#5">与路由器相关的安全挑战有哪些？</a></li>
+            </ul>
+        </div>
+      </div>
+      <div class="my-middle container-fluid">
+
+        <h2 id="1">什么是路由器？
+        </h2>
+        <p class="text-body">路由器是连接两个或多个分组交换网络或子网络的设备。它有两个主要功能：通过将<a
+            href="/learning/network-layer/what-is-a-packet/">数据包</a>转发到其预定的
+          <a href="/learning/dns/glossary/what-is-my-ip-address/">IP 地址</a>从而管理这些网络之间的流量，以及允许多个设备使用同一互联网连接。
+        </p>
+        <p class="text-body">路由器分为几种类型，但大多数路由器在 <a href="/learning/network-layer/what-is-a-lan/">LAN（局域网）</a>和 <a
+            href="/learning/network-layer/what-is-a-wan/">WAN（广域网）</a>之间传递数据。LAN 是一组限制在特定地理区域的连接设备。一个 LAN
+          通常只需要一个路由器。</p>
+        <p class="text-body">与之相反，WAN 是一个分布在广大地理区域的大型网络。例如，在全国各地多个地点运营的大型组织和公司将需要为每个地点建立单独的 LAN，然后与其他 LAN 连接，形成一个
+          WAN。由于 WAN
+          分布在一个大的区域内，它通常需要多个路由器和交换机*。</p>
+        <p class="text-body">*<i><a
+              href="/learning/network-layer/what-is-a-network-switch/">网络交换机</a>在同一网络的设备组之间转发数据包，而路由器则在不同网络之间转发数据。</i>
+        </p>
+        <h2 id="2">路由器如何工作？</h2>
+        <p class="text-body">
+          把路由器想象成一个空中交通指挥员，把数据包想象成飞往不同机场（或网络）的飞机。就像每架飞机都有一个唯一的目的地并遵循唯一的路线一样，每个数据包都需要被尽可能高效地引导到其目的地。与空中交通指挥员员确保飞机到达目的地而不迷路或沿途遭受重大干扰一样，路由器帮助引导数据包到达其目标
+          IP 地址。</p>
+        <p class="text-body">
+          为了有效地引导数据包，路由器使用一个内部路由表——一个通往不同网络目的地的路径列表。路由器读取数据包的标头以确定其去向，然后查阅路由表以找出通往该目的地的最有效路径。然后，它将数据包转发到该路径中的下一个网络。
+        </p>
+        <p class="text-body">要了解有关 <a href="/learning/network-layer/internet-protocol/">IP</a> 路由及此过程中所使用协议的更多信息，请阅读<a
+            href="/learning/network-layer/what-is-routing/">什么是路由？</a></p>
+        <h2 id="3">路由器和调制解调器之间有什么区别？</h2>
+        <p class="text-body">虽然一些互联网服务提供商 (ISP) 可能将路由器和调制解调器合并在一个设备中，但它们并不一样。两者在网络相互连接和连接到互联网方面发挥着不同但同等重要的作用。</p>
+        <p class="text-body">路由器形成网络并管理这些网络内部和之间的数据流，而调制解调器将这些网络连接到互联网。调制解调器通过将来自 ISP
+          的信号转换为可由任何连接设备解释的数字信号，来建立与互联网的连接。一台设备可以插入到调制解调器中，以便连接到互联网。另外，路由器可以帮助将这一信号分发给一个已建立网络中的多个设备，使所有设备能够同时连接到互联网。
+        </p>
+        <p class="text-body">可以这样想：如果 Bob 有一个路由器，但没有调制解调器，他将能够创建一个 LAN 并在该网络上的设备之间发送数据。但是，他无法将该网络连接到互联网。另一方面，Alice
+          有一个调制解调器，但没有路由器。她将能够将单个设备连接到互联网（例如，她的工作笔记本电脑），但不能将该互联网连接分发到多个设备（比如说，她自己的笔记本电脑和智能手机）。与此同时，Carol
+          有一个路由器和一个调制解调器。使用这两种设备，她可以与她的台式电脑、平板电脑和智能手机组成一个 LAN，并将它们同时连接到互联网。</p>
+        <h2 id="4">有哪些不同类型的路由器？</h2>
+        <p class="text-body">要将 LAN 连接到互联网，路由器首先需要与调制解调器通信。有两种主要的方式来实现这一点：</p>
+        <ul>
+          <li><i>无线路由器：</i>无线路由器使用以太网电缆连接到调制解调器。它通过将数据包从二进制代码转换为无线电信号来分发数据，然后用天线无线广播信号。无线路由器不建立 LAN；相反，它创建
+            WLAN（无线局域网），使用无线通信连接多个设备。</li>
+          <li><i>有线路由器：</i>与无线路由器一样，有线路由器也使用以太网电缆连接到调制解调器。然后它使用单独的电缆连接到网络内的一个或多个设备，创建一个 LAN，并将该网络内的设备连接到互联网。
+          </li>
+        </ul>
+        <p class="text-body">除了适用于小型 LAN 的无线和有线路由器外，还有许多专门类型的路由器，用于提供特定的功能：</p>
+        <ul>
+          <li><i>核心路由器：</i>与家庭或小型企业 LAN 内使用的路由器不同，核心路由器由大型公司和企业使用，用于在其网络内传输大量的数据包。核心路由器在网络的“核心”运作，不与外部网络通信。
+          </li>
+          <li><i>边缘路由器：</i>核心路由器专门管理大规模网络内的数据流量，而边缘路由器则同时与核心路由器和外部网络进行通信。边缘路由器位于网络“边缘”，使用 <a
+              href="/learning/security/glossary/what-is-bgp/">BGP（边界网关协议）</a>发送和接收来自其他 LAN 和 WAN 的数据。</li>
+          <li><i>虚拟路由器：</i>虚拟路由器是一种软件应用程序，其功能与标准硬件路由器相同。它可以使用虚拟路由器冗余协议 (VRRP) 来建立主要和备用的虚拟路由器（当主要路由器出现故障时使用）。
+          </li>
+        </ul>
+        <h2 id="5">与路由器相关的安全挑战有哪些？</h2>
+        <p class="text-body">
+          <strong>漏洞利用：</strong>所有基于硬件的路由器都随附自动安装的软件，称为固件，固件用于帮助路由器执行其功能。像任何其他软件一样，路由器固件经常包含网络攻击者可以利用的漏洞（<a
+            href="https://threatpost.com/netgear-zero-day-takeover-routers/156744/"
+            target="_blank">示例</a>），路由器供应商定期发布更新，以修补这些漏洞。出于此原因，路由器固件需要定期更新。未修补的路由器可能被攻击者入侵，使他们能够监控流量或将路由器用作<a
+            href="/learning/ddos/what-is-a-ddos-botnet/">僵尸网络</a>的一部分。
+        </p>
+        <p class="text-body"><strong>DDoS 攻击：</strong>小型和大型组织经常成为分布式拒绝服务 (DDoS) 攻击的目标，此类攻击针对公司的网络基础设施。如果不对<a
+            href="/learning/ddos/layer-3-ddos-attacks/">网络层 DDoS 攻击</a>进行缓解，可能使路由器不堪重负或导致它们崩溃，从而导致网络停机。<a
+            href="/magic-transit/">Cloudflare Magic Transit</a> 是保护路由器和网络免受此类 DDoS 攻击的一个解决方案。</p>
+        <p class="text-body">
+          <strong>管理凭据</strong>：所有路由器都有一套管理凭据，用于执行管理功能。这些凭据被设置为默认值，例如，以“admin”为用户名且以“admin”为密码。应尽快将用户名和密码重置为更安全的值：攻击者知道这些凭据的常见默认值，如果不重置，攻击者可以利用它们远程控制路由器。
+        </p>
+
+      </div>
+      <div class="my-right  container-fluid">
+        <div>
+          <h4>目录</h4>
+            <ul>
+              <li><a href="#1">什么是路由器？</a></li>
+              <li><a href="#2">路由器如何工作？</a></li>
+              <li><a href="#3">路由器和调制解调器之间有什么区别？</a></li>
+              <li><a href="#4">有哪些不同类型的路由器？</a></li>
+              <li><a href="#5">与路由器相关的安全挑战有哪些？</a></li>
+            </ul>
+        </div>
+      </div>
+    </div>
+    <!-- 页脚 -->
+    <footer class="blog-footer">
+      <div>
+        <p>2022 ©Company <a href="https://www.qisa.icu/note">qisayouran</a>.
+        </p>
+      </div>
+    </footer>
+  </div>
+  <script src="../js/jquery.js"></script>
+  <script src="../bootstrap/js/bootstrap.js"></script>
+</body>
+
+</html>

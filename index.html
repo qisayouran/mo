@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+  <div>
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top bg-dark">
+      <h4>
+        <a class="my-title align-middle" href="/">网络知识</a>
+      </h4>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse my-header" id="navbarCollapse">
+        <ul class="nav mr-md-auto">
+        </ul>
+        <ul class="navbar-nav justify-content-end">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">网络层</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/html/how-does-the-internet-work.html">什么是互联网</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-expanded="false">
+              网络基础知识局域网（LAN）
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/html/what-is-routing.html">什么是路由？</a>
+              <a class="dropdown-item" href="/html/what-is-a-router.html">什么是路由器？</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- 幻灯片 -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+      </ol>
+      <div class="carousel-inner">
+        <!-- 一 -->
+        <div class="carousel-item active" style="background-color:#96d4fa;">
+          <div class="container">
+            <div class="my-container-m">
+              <img src="./images/how-does-internet-work.png" alt="cs">
+                <div class="my-carousel-div">
+                  <h3><a class="my-button" href="#">什么是网络层？</a></h3>
+                </div>
+            </div>
+          </div>
+        </div>
+        <!-- 二 -->
+        <div class="carousel-item" style="background-color:#96d4fa;">
+          <div class="container">
+            <div class="my-container-m">
+              <img src="./images/what-is-the-network-layer.png" alt="cs">
+                <div class="my-carousel-div">
+                  <h3><a class="my-button" href="./html/how-does-the-internet-work.html">互联网如何运作？</a></h3>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 左 -->
+      <button class="carousel-control-prev" type="button" data-target="#myCarousel" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only bg-dark">Previous</span>
+      </button>
+      <!-- 右 -->
+      <button class="carousel-control-next" type="button" data-target="#myCarousel" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </button>
+    </div>
+    <!-- 内容 -->
+
+    <div class="container my-container">
+      <div class="row">
+        <div class="col-4">
+          <div class="list-group" id="list-tab" role="tablist">
+            <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list"
+              href="#list-network" role="tab" aria-controls="home">在网络层会发生什么？</a>
+            <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list"
+              href="#list-number-packages" role="tab" aria-controls="profile">什么是数据包？</a>
+            <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list"
+              href="#list-ois" role="tab" aria-controls="messages">什么是 OSI 模型？</a>
+          </div>
+        </div>
+        <div class="col-8">
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="list-network" role="tabpanel">
+              <p>与网络间连接相关的所有流程都发生在网络层。这包括设置数据包采用的路由，检查其他网络中的服务器是否在正常运行，以及寻址和接收来自其他网络的 IP 数据包。由于绝大多数 Internet 流量都是通过 IP 发送的，最后的这个流程可能最为重要。</p>
+            </div>
+            <div class="tab-pane fade" id="list-number-packages" role="tabpanel">
+              <p>通过 Internet
+                发送的所有数据都被分解为较小的块，称为“数据包”。例如，当鲍勃向爱丽丝发送消息时，他的消息被分解成较小的部分，然后在爱丽丝的计算机上重新组合。一个数据包包含两部分：标头（包含有关数据包本身的信息）和正文（正在发送的实际数据）。
+              </p>
+              <p>在网络层，当数据包通过 Internet 发出时，网络软件会在每个数据包上附加一个标头，另一方面，网络软件可以通过标头获知如何处理该数据包。</p>
+              <p>标头包含有关每个数据包的内容、源和目标的信息（有点像在信封上标记目的地和退回地址）。例如，IP 标头包含每个数据包的目标 <a
+                  href="/learning/dns/glossary/what-is-my-ip-address/">IP 地址</a>
+                、数据包的总大小、在传输过程中是否已将数据包分段（分解成更小的片段）的标示，以及数据包经过的网络的计数。</p>
+            </div>
+            <div class="tab-pane fade" id="list-ois" role="tabpanel">
+              <p>开放系统互连（OSI）模型是对 Internet 工作方式的描述。它将通过 Internet 发送数据所涉及的功能分解为七层。每一层都有特定功能，以便将数据准备好，作为一系列比特通过电线、电缆和无线电波发送出去。
+              </p>
+              <p>OSI 模型的七层包括：</p>
+              <ul class="my-ui-li">
+                <li><strong>7. 应用程序层：</strong>由软件应用程序生成并可由其使用的数据。该层使用的主要协议是 <a
+                    href="/learning/ddos/glossary/hypertext-transfer-protocol-http/">HTTP</a> 。</li>
+                <li><strong>6. 表示层：</strong>将数据转换为应用程序可以接受的形式。一些机构认为 <a href="/learning/ssl/what-is-https/">HTTPS
+                    加密</a>和解密在该层进行。</li>
+                <li><strong>5.会话层：</strong>控制计算机之间的连接（这也可以由 <a href="/learning/ddos/glossary/tcp-ip/">TCP 协议</a>在第 4 层处理）。
+                </li>
+                <li><strong>4. 传输层：</strong>提供在两个连接设备之间传输数据以及控制服务质量的方法。这里使用的主要协议是 TCP 和 <a
+                    href="/learning/ddos/glossary/user-datagram-protocol-udp/">UDP</a> 。</li>
+                <li><strong>3. 网络层：</strong>处理不同网络之间的数据路由和发送。该层使用的最重要协议是 IP 和 ICMP。</li>
+                <li><strong>2. 数据链路层：</strong>处理同一网络中不同设备之间的通信。如果第 3 层比作一封邮件上的地址，那么第 2 层就指明了该地址的办公室号码或公寓号码。以太网是这里最常用的协议。</li>
+                <li><strong>1. 物理层：</strong>数据包被转换为电脉冲、无线电脉冲或光脉冲，并以比特（信息的最小单位）的形式通过电线、无线电波或电缆进行传输。</li>
+                <p>请务必记住，OSI 模型是对使得 Internet 正常工作的众多流程的概念化的抽象描述，阐述模型以及将其应用到现实世界中的 Internet 时，有时是主观的。</p>
+                <p>OSI 模型有助于人们讨论网络设备和协议，确定哪些协议由哪些软件和硬件使用，并大致显示 Internet 的工作方式。但它并未严格地分步定义 Internet 连接的普遍运作方式。</p>
+                <h2 class="learning-content-h2" itemprop="headline">OSI 模型与 TCP/IP 模型</h2>
+                <p>TCP/IP 模型是另一种 Internet 工作方式模型。它将涉及的流程分为四层，而不是七层。有人会认为 TCP/IP 模型更好地体现了当今 Internet 的工作方式，但人们理解 Internet
+                  时仍会广泛参考 OSI 模型。两种模型都有其优缺点。</p>
+                <p>在 TCP/IP 模型中，四层包括：</p>
+                <ul class="learning-list">
+                  <li><strong>4. 应用程序层：</strong>这大致相当于 OSI 模型中的第 7 层。</li>
+                  <li><strong>3. 传输层：</strong>对应于 OSI 模型中的第 4 层。</li>
+                  <li><strong>2. 互联网层：</strong> 对应于 OSI 模型中的第 3 层。</li>
+                  <li><strong>1. 网络访问层：</strong>结合了 OSI 模型中第 1 层和第 2 层的过程。</li>
+      
+                  <p>但是，TCP/IP 模型中 OSI 的第 5 层和第 6 层在哪里？一些消息来源认为，现代 Internet 中不再需要 OSI 第 5 层和第 6 层的流程，或者这些流程实际上属于<a
+                      href="/learning/ddos/what-is-layer-7/">第 7 层</a>和第 4 层（TCP/IP 模型中由第 4 层和第 3 层表示）。</p>
+                  <p>例如，由于 TCP 协议在 OSI 第 4 层上打开并维护会话，因此可以认为 OSI 第 5 层（“会话”层）是不必要的，该层未体现在 TCP/IP 模型中。此外，可以将 HTTPS
+                    加密和解密视为应用程序层（OSI 第 7 层或 TCP/IP 第 4 层）流程，而非表示层（OSI 第 6 层）流程。</p>
+                  <h2 class="learning-content-h2" itemprop="headline">“网络”层和“Internet”层有什么区别？</h2>
+                  <p>在 TCP/IP 模型中，没有“网络”层。OSI 模型网络层大致对应于 TCP/IP 模型 Internet 层。在 OSI 模型中，网络层为第 3 层。在 TCP/IP 模型中，Internet 层是第 2
+                    层。</p>
+                  <p>换句话说，网络层和互联网层基本上是同一回事，但是它们来自不同的 <a
+                      href="/learning/network-layer/how-does-the-internet-work/">互联网工作方式</a>模型。</p>
+                  <h2 class="learning-content-h2" itemprop="headline">网络层使用什么协议？</h2>
+                  <p>协议是公认的格式化数据的方式，以便两台或多台设备能够相互通信并相互理解。通过采用多种不同的协议，可以在网络层进行连接、测试、路由和加密，其中包括：</p>
+                  <ul class="learning-list">
+                    <li>IP</li>
+                    <li>IPsec</li>
+                    <li>ICMP</li>
+                    <li>IGMP</li>
+                    <li>GRE</li>
+                  </ul>
+                  <p>由于网络层基础设施暴露于互联网的其余部分，因此容易受到外部攻击，尤其是<a
+                      href="/learning/ddos/what-is-a-ddos-attack/">分布式拒绝服务（DDoS）</a>攻击。路由器、交换机和其他网络接口都可能被大量的恶意网络流量攻击或破坏，并且上述网络协议几乎都能被利用以发动攻击。
+                  </p>
+                </ul>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 页脚 -->
+    <footer class="blog-footer">
+      <div>
+        <p>2022 ©Company <a href="https://www.qisa.icu/note">qisayouran</a>.
+        </p>
+      </div>
+    </footer>
+  </div>
+  </div>
+  <script src="./js/jquery.js"></script>
+  <script src="./bootstrap/js/bootstrap.js"></script>
+</body>
+
+</html>

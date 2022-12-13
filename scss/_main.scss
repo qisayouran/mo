@@ -1,0 +1,201 @@
+#flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+#flex-container>.flex-item {
+  flex: auto;
+}
+
+#flex-container>.raw-item {
+  width: 5rem;
+}
+
+.my-back {
+  background-image: url("https://www.cloudflare.com/static/f66c9352641e2d181c7d3d4f4e80c899/Test_V1.svg");
+}
+
+.my-button {
+  text-decoration: none;
+  border-radius: 10em;
+  background-color: #007bff;
+  padding: 0.5em;
+  color: white;
+}
+
+.my-button:hover {
+  text-decoration: none;
+  background-color: #007bff;
+  color: white;
+  outline: 5px solid #00ffdd;
+}
+
+.my-left {
+  div {
+    position: sticky;
+    top: 60px;
+
+    p,
+    h4 {
+      margin: 1em 1em;
+    }
+
+    ul {
+      li {
+        margin-left: -1em;
+        margin-bottom: 0.5em;
+        list-style-type: none;
+      }
+
+      li::before {
+        color: #f63;
+        content: "•";
+        font-weight: 800;
+        left: 0.5em;
+        position: absolute;
+      }
+    }
+  }
+}
+
+.my-right {
+  display: none;
+
+  div {
+    position: sticky;
+    top: 60px;
+
+    p,
+    h4 {
+      margin: 1em 1em;
+    }
+
+    line-height: 1.5em;
+
+    ul {
+      li {
+        margin-bottom: 0.5em;
+
+        a {
+          position: relative;
+          color: #5a5a5a;
+        }
+
+        a:hover {
+          text-decoration: none;
+        }
+
+        a:active {
+          color: #c021d5;
+        }
+      }
+    }
+  }
+}
+
+.my-container {
+  padding: 2em;
+  width: 100%;
+}
+
+.my-right-m {
+  display: inline;
+
+  div {
+
+    p,
+    h4 {
+      margin: 1em 1em;
+    }
+
+    line-height: 1.5em;
+
+    ul {
+      li {
+        margin-bottom: 0.5em;
+
+        a {
+          position: relative;
+          color: #5a5a5a;
+        }
+
+        a:hover {
+          text-decoration: none;
+        }
+
+        a:active {
+          color: #c021d5;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width:600px) {
+  .my-middle {
+    width: 60%;
+  }
+
+  .my-container {
+    display: flex;
+  }
+
+  .my-left {
+    width: 20%;
+  }
+
+  .my-right {
+    width: 20%;
+    display: block;
+  }
+
+  .my-right-m {
+    width: 20%;
+    display: none;
+  }
+
+  .my-container-m {
+    display: flex;
+    justify-content: center;
+    margin: 2em;
+
+    >img {
+      text-align: center;
+      width: 60%;
+    }
+
+    .my-carousel-div {
+      text-align: center;
+      width: 40%;
+      position: relative;
+
+      >h3 {
+        position: absolute;
+        left: 20%;
+        top: 50%;
+      }
+    }
+  }
+}
+@media screen and (max-width:600px) {
+  .my-container-m {
+    text-align: center;
+
+    >img {
+      margin-top: 5em;
+      height: 200px;
+    }
+    .my-carousel-div {
+      text-align: center;
+      margin-top: 4em;
+    }
+  }
+}
+
+.my-carousel {
+  display: block;
+}
+
+:root {
+  scroll-padding-top: 70px;
+}

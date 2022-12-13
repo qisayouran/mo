@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.css">
+  <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body>
+  <div>
+    <nav class="navbar navbar-expand-md navbar-dark sticky-top bg-dark">
+      <h4>
+        <a class="my-title align-middle" href="/">网络知识</a>
+      </h4>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse collapse my-header" id="navbarCollapse">
+        <ul class="nav mr-md-auto">
+        </ul>
+        <ul class="navbar-nav justify-content-end">
+          <li class="nav-item">
+            <a class="nav-link" href="/">网络层</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">什么是互联网</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-expanded="false">
+              网络基础知识局域网（LAN）
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="/html/what-is-routing.html">什么是路由？</a>
+              <a class="dropdown-item" href="/html/what-is-a-router.html">什么是路由器？</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- 内容 -->
+    <div class="my-container">
+      <div class="my-left container-fluid">
+        <div>
+          <h4>学习目标</h4>
+          <p class="text-body">阅读本文后，您将能够：</p>
+          <ul>
+            <li>定义“互联网”</li>
+            <li>了解计算机网络的工作方式</li>
+            <li>了解数据包交换和网络协议</li>
+            <li>网络硬件入门</li>
+          </ul>
+        </div>
+      </div>
+      <div class="my-right-m container-fluid">
+        <div>
+          <h4>目录</h4>
+          <ul>
+            <li>
+              <a href="#a">互联网如何运作？</a>
+            </li>
+            <li><a href="#2">促成互联网运作的物理基础设施是什么？</a></li>
+            <li><a href="#3">这些概念与用户通过互联网访问的网站和应用程序有何关系？</a></li>
+            <li><a href="#4">“帮助构建更好的互联网”是什么意思？</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="my-middle container-fluid">
+        <h2 id="a">互联网如何运作？</h2>
+        <p class="text-body">互联网运作的基本原理包含两个主要概念：<i>数据包</i>和<i>协议</i>。</p>
+        <h4>数据包</h4>
+        <p class="text-body">
+          在网络中，数据包是较大消息的一小部分。每个数据包都包含数据和有关该数据的信息。有关数据包内容的信息称为“标头”，它位于数据包的最前面，以便接收方机器知道如何处理数据包。若要了解数据包标头的用途，可以想一下某些消费类产品是如何随附组装说明的。
+        </p>
+        <p class="text-body">
+          当数据通过互联网发送时，它首先分解为较小的数据包，接着转换为位。数据包通过各种网络设备（如路由器和交换机）路由到其目的地。当数据包到达目的地时，接收设备会按顺序重组数据包，然后可以使用或显示数据。
+        </p>
+        <p class="text-body">
+          这个过程可与美国自由女神像的建造进行类比。自由女神像最初是在法国设计和建造的。但是，它尺寸太大，无法装到船上，因此它被分块运送到美国，并附上有关每一块所属位置的说明。收到这些块的工人将它们重新组装成今天矗立在纽约的雕像。
+        </p>
+        <p class="text-body">运送自由女神像花了很长时间，但通过互联网以较小的片段发送数字信息的速度非常快。例如，存储在 Web
+          服务器上的自由女神像照片可以一次发送一个数据包，跨越整个地球并加载到某人的计算机上，整个过程只需几毫秒。</p>
+        <p class="text-body">
+          数据包使用称为数据包交换的技术通过互联网发送。中间路由器和交换机能够彼此独立地处理数据包，无需考虑其来源或目的地。这是设计使然，没有哪个连接可以独霸网络。如果不进行数据包交换，一次在计算机之间发送数据，那么两台计算机之间的连接可能会在数分钟内占用数条线缆，以及多台路由器交换机。基本上，一次只能有两个人可以使用互联网，而不是像现实中那样人数不限。
+        </p>
+        <h4>协议</h4>
+        <p class="text-body">
+          连接两台可能使用不同硬件并运行不同软件的计算机，是互联网缔造者必须解决的主要挑战之一。这需要使用所有连接的计算机都可理解的通信技术，就像在世界上不同地区长大的两个人可能需要说一种通用语言才能互相理解一样。
+        </p>
+        <p class="text-body">这个问题可标准化协议解决。在网络中，协议是执行某些操作和格式化数据的标准化方法，以便两个或更多设备能够相互通信并相互理解。</p>
+        <p class="text-body">协议有多种，用于在同一网络（以太网）上的设备之间发送数据包，在网络之间（<a
+            href="/learning/ddos/glossary/internet-protocol/">IP</a>）发送数据包，确保这些数据包成功按顺序到达（<a
+            href="/learning/ddos/glossary/tcp-ip/">TCP</a>），以及为网站和应用程序格式化数据（<a
+            href="/learning/ddos/glossary/hypertext-transfer-protocol-http/">HTTP</a>）等。除了这些基本协议之外，还有用于路由、测试和<a
+            href="/learning/ssl/what-is-encryption/">加密的</a>协议。对于不同类型的内容，也有上述协议的替代协议。例如，流视频通常使用 <a
+            href="/learning/ddos/glossary/user-datagram-protocol-udp/">UDP</a> 而不是 TCP。</p>
+        <p class="text-body">所有连入互联网的计算机和其他设备都可以解释和理解这些协议，所以无论连接的是什么，互联网都可以正常工作。</p>
+        <h2 id="2">促成互联网运作的物理基础设施是什么？</h2>
+        <p class="text-body">许多不同种类的硬件和基础设施使互联网能为众人所用。其中一些最重要的类型包括：</p>
+        <ul>
+          <li><a href="/learning/network-layer/what-is-a-router/">路由器</a>
+            根据目的地将数据包转发到其他计算机网络。路由器就像是互联网上的交通警察，确保互联网流量流向正确的网络。
+          </li>
+          <li><a href="/learning/network-layer/what-is-a-network-switch/">交换机</a>
+            连接共享一个网络的多个设备。它们使用数据包交换将数据包转发到正确的设备。它们也从这些设备接收出站数据包，并将它们传递到正确的目的地。
+          </li>
+          <li>Web 服务器是特殊的高性能计算机，除了托管应用程序和数据库外，还可以存储内容（网页、图像和视频等）并提供给用户。服务器也响应 <a
+              href="/learning/dns/what-is-dns/">DNS</a> 查询并执行其他重要任务，使互联网保持正常运作。大多数服务器都保管在遍布全球的大型数据中心中。</li>
+        </ul>
+        <h2 id="3">这些概念与用户通过互联网访问的网站和应用程序有何关系？</h2>
+        <img class="responsive-image" width="100%" title="网站加载" alt="网站加载" src="/images/loading-website.png"
+          itemprop="image">
+        <p class="text-body">我们以本文为例。为了让您看到这篇文章，它以数千数据包的形式通过互联网逐个片段发送。这些数据包通过线缆和无线电波穿过路由器和交换机，从我们的Web
+          服务器一路传输到您的计算机或设备。您的计算机或智能手机收到这些数据包，并将它们传递到设备的浏览器，然后浏览器会解释这些数据包中的数据，以显示您正在阅读的文字。</p>
+        <p class="text-body">此过程涉及的具体步骤有：</p>
+        <ol class="learning-list">
+          <li><strong>DNS 查询：</strong>当您的浏览器开始加载本网页时，首先可能进行 DNS 查询以查找 Cloudflare 网站的IP地址。</li>
+          <li><strong>TCP 握手：</strong>浏览器打开与这个 IP 地址的连接。</li>
+          <li><strong>TLS 握手：</strong>浏览器也在 Cloudflare Web 服务器和您的设备之间设置加密，使攻击者无法读取这两个端点之间传输的数据包。</li>
+          <li><strong>HTTP 请求：</strong>浏览器请求此网页上显示的内容。</li>
+          <li><strong>HTTP 响应：</strong>Cloudflare 的服务器以HTML、CSS 和 JavaScript
+            代码的形式传输内容，并分解为一系列数据包。一旦您的设备接收到数据包并验证已收到所有数据包，浏览器就会解释数据包中包含的 HTML、CSS 和 JavaScript
+            代码，以呈现有关互联网工作原理的本文。整个过程只需一两秒。</li>
+        </ol>
+        <p class="text-body">如您所见，加载网页涉及了几个不同的流程和协议。您可以在 Cloudflare 学习中心的其他部分中了解有关这些技术的更多信息：</p>
+        <ul class="learning-list">
+          <li><a href="/learning/dns/what-is-dns/">DNS</a></li>
+          <li><a href="/learning/ddos/glossary/tcp-ip/">TCP</a></li>
+          <li><a href="/learning/ssl/transport-layer-security-tls/">TLS</a></li>
+          <li><a href="/learning/ddos/glossary/hypertext-transfer-protocol-http/">HTTP</a></li>
+        </ul>
+        <h2 id="4">“帮助构建更好的互联网”是什么意思？</h2>
+        <p class="text-body">创造互联网是一项令人难以置信的成就，它涉及成千上万的个人和组织的共同努力。如今，互联网的运行规模远远超出其创造者的预期，这一事实证明了他们所做工作的价值。</p>
+        <p class="text-body">
+          但是，互联网并始终都能正常运行。网络问题和恶意活动可能会减慢互联网访问速度或将其完全阻止。第三方可能会监视用户的活动，从而导致滥用行为，在某些情况下还会导致政府的镇压。互联网协议和流程在设计时并未考虑安全性和隐私性，因为最初设计和构建互联网的人更关心使互联网正常工作，而不是使其完美无缺。
+        </p>
+      </div>
+      <div class="my-right container-fluid">
+        <div>
+          <h4>目录</h4>
+          <ul>
+            <li>
+              <a href="#a">互联网如何运作？</a>
+            </li>
+            <li><a href="#2">促成互联网运作的物理基础设施是什么？</a></li>
+            <li><a href="#3">这些概念与用户通过互联网访问的网站和应用程序有何关系？</a></li>
+            <li><a href="#4">“帮助构建更好的互联网”是什么意思？</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- 页脚 -->
+    <footer class=" blog-footer">
+      <div>
+        <p>© 2022 template for <a href="https://getbootstrap.com/">Bootstrap</a> by
+          <a href="https://www.qisa.icu/note">qisayouran</a>.
+        </p>
+      </div>
+    </footer>
+  </div>
+  <script src="../js/jquery.js"></script>
+  <script src="../bootstrap/js/bootstrap.js"></script>
+</body>
+
+</html>
